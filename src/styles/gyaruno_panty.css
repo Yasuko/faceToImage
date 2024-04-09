@@ -1,0 +1,125 @@
+
+.gyaruno-panty-start {
+    font-size: 2em;
+    font-weight: lighter;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    animation: gyaruno-panty-start 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.gyaruno-panty-start:hover {
+    cursor: pointer;
+
+    will-change: font-size, color, top, left;
+    animation-name: fadeInAnime;
+    animation-fill-mode:backwards;
+    animation-duration:2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:infinite;
+    animation-delay: 0;
+}
+
+
+
+
+@keyframes fadeInAnime{
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        font-size: 3em;
+        color: rgba(200,200,200,1);
+        top:43%;
+        left: 42%;
+    }
+}
+
+.panty-base {
+    width: svw;
+    height: svh;
+    padding: 5%;
+}
+
+.panty-image {
+    position: relative;
+    width : 600px;
+    animation: rotation-3d 5s linear;
+
+    margin: 0 25%;
+}
+
+.panty-generate-agein {
+    position: absolute;
+
+    font-size: 2em;
+    font-weight: lighter;
+    border: solid 1px rgba(150,150,150,1);
+
+    width: 400px;
+    bottom: 2%;
+    right: 2%;
+
+    border-radius: 5px;
+}
+/* アニメーション */
+@keyframes rotation-3d {
+    0% {
+    transform: rotate3d(1,1,1,0deg);
+    scale: 0.1;
+    }
+    100% {
+    transform: rotate3d(1,1,1,360deg);
+    scale: 1;
+    }
+}
+
+
+.face-detect-video {
+    position: relative;
+    width: 650px;
+    height: 500px;
+    margin: 0 22%;
+    border: solid 25px rgba(150,150,150,1);
+    border-radius: 10px;
+}
+
+.face-detect-message-box {
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    top: 85%;
+    left: 17%;
+    margin: 0 22%;
+
+}
+
+/*
+* 顔が正面を向くようにどっちを向けば良いかのメッセージを
+* 画面中央下部に表示する
+*/
+.face-detect-message {
+    position: absolute;
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+    line-height: 50px;
+    color: rgba(200,200,200,1);
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+
+.face-text-base {
+    width: svw / 2;
+    padding: 5%;
+}
+
+.face-text-image {
+    width: 400px;
+    border: solid 1px rgba(150,150,150,1);
+    border-radius: 10px;
+}
