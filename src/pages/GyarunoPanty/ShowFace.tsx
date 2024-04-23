@@ -49,6 +49,27 @@ export const ShowFace = (): JSX.Element => {
                             {pi.face_detect}
                         </span>
                     </div>
+                    <br></br>
+                    <br></br>
+                    <div>
+                        <label className="sr-only" htmlFor="text1">生成プロンプト</label>
+                        <textarea
+                            cols={80}
+                            rows={8}
+                            className="form-control mb-2"
+                            id="text1"
+                            placeholder="Input Sample"
+                            defaultValue={pi.prompt}
+                            onChange={(e) => {
+                                dispatch({
+                                    type    : 'PantyImage/setPrompt',
+                                    prompt  : e.target.value
+                                })
+                            }} />
+                        <span>
+                            顔写真から作成した人相とプロンプトをあわせて、柄を生成します。
+                        </span>
+                    </div>
                 </div>
             </div>
 

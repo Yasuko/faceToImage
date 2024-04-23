@@ -141,7 +141,9 @@ function* generateImage(val: any): any
     const p = yield select(PantyImage)
     const token = yield select(Token)
     
-    const i = yield ImageModel.call(token.token).generate(p.face_detect)
+    const i = yield ImageModel.call(token.token)
+                    .generate(p.face_detect, p.prompt)
+                    
     console.log('Face convert image', i)
 
     yield loadingHide()

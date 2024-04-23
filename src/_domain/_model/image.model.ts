@@ -33,13 +33,12 @@ export class ImageModel {
 
     public async generate(
         detect: string,
+        spice : string,
     ): Promise<ImageReturn> {
         ImageService.call()
             .setJob('generate')
             .setOptions({
-                prompt  : '「' + detect + '」この文章をアクセントに加え、'
-                + '日本の四季、花鳥風月、を全面に押し出した和風で素敵な柄のデザインを作って下さい。'
-                + '生成されるデザインに人の顔が入らないようにして下さい。'
+                prompt  : '「' + detect + '」この文章をアクセントに加え、' + spice + 'を加えた画像を生成してください。',
             })
         
         ImageService.call().ini()
